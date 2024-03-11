@@ -17,17 +17,17 @@ def get_query_and_answers():
     
     return cur.fetchall()
 
-print(get_query_and_answers())
+# print(get_query_and_answers())
 
-# def get_answer_from_memory(question):
-#     rows = get_query_and_answers()
-#     answer = ""
+def get_answer_from_memory(question):
+    rows = get_query_and_answers()
+    answer = ""
 
-#     for row in rows:
-#         if row[0].lower() in question.lower():
-#             answer = row[1]
-#             break
-#     return answer    
+    for row in rows:
+        if row[0].lower() in question.lower():
+            answer = row[1]
+            break
+    return answer    
 
 
-# print(get_answer_from_memory("what is time"))
+print(get_answer_from_memory("what is time"))
