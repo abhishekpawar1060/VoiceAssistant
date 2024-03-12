@@ -4,8 +4,12 @@ from database import get_answer_from_memory
 
 
 def process(query):
-    answer = get_answer_from_memory(query)
-    if answer == "get time details":
-        return ("Time is " +get_time())
+    if "what is time" in query:
+        output("Time is "+get_time())
     else:
-        return "Nothing to return"
+        return "Nothing to return"    
+    # answer = get_answer_from_memory(query)
+    # if answer == "get time details":
+    #     return ("Time is " +get_time())
+    # else:
+    #     return "Nothing to return"
