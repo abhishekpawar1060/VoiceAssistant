@@ -19,6 +19,15 @@ def get_query_and_answers():
 
 # print(get_query_and_answers())
 
+def insert_question_and_answer(question, answer):
+    con = create_connection()
+    cur = con.cursor()
+    query = "INSERT INTO queryAndAnswers VALUES ('"+question+"','"+answer+"')"
+    cur.execute(query)
+    con.commit()
+    cur.close()
+
+
 def get_answer_from_memory(question):
     rows = get_query_and_answers()
     answer = ""
