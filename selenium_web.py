@@ -1,5 +1,8 @@
 from selenium import webdriver
 import time
+
+
+
 class infow():
     def __init__(self):
         self.driver = webdriver.Chrome()
@@ -18,6 +21,3 @@ class infow():
         input("Press Enter to close the browser...")
         self.driver.quit()
 
-assist = infow()
-assist.get_info("java")
-assist.wait_to_close()
