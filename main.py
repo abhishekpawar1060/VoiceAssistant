@@ -1,8 +1,11 @@
 import pyttsx3 as p
 import speech_recognition as sr
+import randfacts
 
 from selenium_web import infow
 from YouTube import music
+from News import news
+
 
 engine = p.init()
 rate = engine.getProperty('rate')  #Speed of the voice
@@ -72,3 +75,19 @@ elif "play" and "video" in text2:
     assist.play(video)
     assist.wait_to_close()
 
+elif "news" in text2:
+    print("Sure sir, Now I will read news for you")
+    speak("Sure sir, Now I will read news for you")
+
+    arr = news()
+    for i in range(len(arr)):
+        speak(arr[i])
+        print(arr[i])
+
+elif "fact" or "facts" in text2:
+    print("Sure sir ")
+    speak("Sure sir ")
+
+    x = randfacts.getFact()
+    print(x)
+    speak("Did you know that, "+x)
