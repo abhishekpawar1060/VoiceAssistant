@@ -8,3 +8,5 @@ Install all Required packages
 6. Use the API for news : Newsapi.org
 
 7. pip install randfacts : (Telling the random facts for the user)
+
+8. Use the API for Jokes : https://official-joke-api.appspot.com/random_joke

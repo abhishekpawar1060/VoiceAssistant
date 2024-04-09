@@ -5,7 +5,7 @@ import randfacts
 from selenium_web import infow
 from YouTube import music
 from News import news
-
+from jokes import *
 
 engine = p.init()
 rate = engine.getProperty('rate')  #Speed of the voice
@@ -84,10 +84,21 @@ elif "news" in text2:
         speak(arr[i])
         print(arr[i])
 
-elif "fact" or "facts" in text2:
+elif "fact" in text2:
     print("Sure sir ")
     speak("Sure sir ")
 
-    x = randfacts.getFact()
+    x = randfacts.get_fact()
     print(x)
     speak("Did you know that, "+x)
+
+
+elif "joke" in text2:
+    print("Sure sir")
+    speak("Sure sir")
+
+    arr = joke()
+    print(arr[0])
+    speak(arr[0])
+    print(arr[1])
+    speak(arr[1])
