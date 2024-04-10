@@ -1,13 +1,16 @@
-import pyttsx3 as p
+import pyttsx3 as py
 import speech_recognition as sr
 import randfacts
+import datetime
 
 from selenium_web import infow
 from YouTube import music
 from News import news
 from jokes import *
+from weather import *
+from wishme import *
 
-engine = p.init()
+engine = py.init()
 rate = engine.getProperty('rate')  #Speed of the voice
 engine.setProperty('rate',130) #change the speed rate to 180(default id 200)
 voices = engine.getProperty('voices')
@@ -17,9 +20,13 @@ def speak(text):
     engine.say(text)
     engine.runAndWait()
 
+today_date = datetime.datetime.now()
 r = sr.Recognizer()     #Recognizer use microphone
 
-speak("Hello sir i'm your voice assistant. How are you?")
+speak("Hello sir, Good " +wish()+ " i'm your voice assistant.")
+# speak("Today is "+today_date.strftime("%d")+ " of" +today_date.strftime("%B")+ " And its currenty " +(today_date.strftime("%I"))+(today_date.strftime("%M"))+(today_date.strftime("%D")))
+# speak("Temperature in Aurangabad is "+str(temp())+" degree celcius" " and with " +str(des()))
+speak("What i can do for you?")
 
 with sr.Microphone() as source:
     r.energy_threshold = 10000  #It increace the spectrum of voice
@@ -30,7 +37,7 @@ with sr.Microphone() as source:
     print(text)
 
 if "what" and "about" and "you" in text:
-    speak("i am also having a good day sir")
+    speak("I am also having a good day sir")
 
 speak("What can I do for you?")
 
@@ -102,3 +109,16 @@ elif "joke" in text2:
     speak(arr[0])
     print(arr[1])
     speak(arr[1])
+
+
+elif "weather" in text2:
+    print("Sure sir")
+    speak("Sure sir")
+    print("Temperature in Aurangabad is "+str(temp())+" degree celcius" " and with " +str(des()))
+    speak("Temperature in Aurangabad is " + str(temp()) + " degree celcius" " and with " + str(des()))
+
+elif "time" or "date" in text2:
+    print("Sure sir")
+    speak("Sure sir")
+    print("Today is "+today_date.strftime("%d")+ " of" +today_date.strftime("%B")+ " And its currenty " +(today_date.strftime("%I"))+(today_date.strftime("%M"))+(today_date.strftime("%D")))
+    speak("Today is " + today_date.strftime("%d") + " of" + today_date.strftime("%B") + " And its currenty " + (today_date.strftime("%I")) + (today_date.strftime("%M")) + (today_date.strftime("%D")))

@@ -10,3 +10,6 @@ Install all Required packages
 7. pip install randfacts : (Telling the random facts for the user)
 
 8. Use the API for Jokes : https://official-joke-api.appspot.com/random_joke
+9. Use the API for Weather: https://openweathermap.org/api/
+10. Use the datatime module for telling the date and time
+11. 
