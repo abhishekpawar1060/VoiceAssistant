@@ -12,4 +12,4 @@ Install all Required packages
 8. Use the API for Jokes : https://official-joke-api.appspot.com/random_joke
 9. Use the API for Weather: https://openweathermap.org/api/
 10. Use the datatime module for telling the date and time
-11. 
+11. Use the api of gemini api for general question answer https://aistudio.google.com/app/apikey
