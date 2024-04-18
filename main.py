@@ -3,7 +3,6 @@ import speech_recognition as sr
 import randfacts
 import datetime
 
-
 from selenium_web import infow
 from YouTube import music
 from News import news
@@ -26,8 +25,6 @@ today_date = datetime.datetime.now()
 r = sr.Recognizer()     #Recognizer use microphone
 
 speak("Hello sir, Good " +wish()+ " i'm your voice assistant.")
-# speak("Today is "+today_date.strftime("%d")+ " of" +today_date.strftime("%B")+ " And its currenty " +(today_date.strftime("%I"))+(today_date.strftime("%M"))+(today_date.strftime("%D")))
-# speak("Temperature in Aurangabad is "+str(temp())+" degree celcius" " and with " +str(des()))
 speak("How are You?")
 
 with sr.Microphone() as source:
