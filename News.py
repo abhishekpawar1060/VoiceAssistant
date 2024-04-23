@@ -1,8 +1,8 @@
 import requests
 
-# key = "9d6ffcb1040447a7b2cab6e7aca9323a"
+key = "Enter the API_KEY"
 
-api_address = "https://newsapi.org/v2/everything?q=apple&from=2024-04-08&to=2024-04-08&sortBy=popularity&apiKey=9d6ffcb1040447a7b2cab6e7aca9323a"
+api_address = "https://newsapi.org/v2/everything?q=apple&from=2024-04-08&to=2024-04-08&sortBy=popularity&apiKey="+key
 
 json_data = requests.get(api_address).json()
 
