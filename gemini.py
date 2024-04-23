@@ -4,7 +4,7 @@ import json
 
 def gemini(prompt):
 
-    apikey = 'AIzaSyBt57JVm-TajwkdJioHbfHwRrCwp0T-O2g'
+    apikey = 'Enter the API KEY of Gemini'
     headers = {
         'Content-Type': 'application/json',
     }
